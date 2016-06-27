@@ -12,6 +12,23 @@ public class PartInfo implements Serializable {
 	private String ToWarehouse;
 	private String ToBin;
 	private String referencePrefix;
+	
+	public PartInfo(){
+		super();
+	}
+	
+	public PartInfo(String sscc, String partNum, Integer partQty, String fromWarehouse, String fromBin,
+			String toWarehouse, String toBin, String referencePrefix) {
+		super();
+		this.sscc = sscc;
+		PartNum = partNum;
+		PartQty = partQty;
+		FromWarehouse = fromWarehouse;
+		FromBin = fromBin;
+		ToWarehouse = toWarehouse;
+		ToBin = toBin;
+		this.referencePrefix = referencePrefix;
+	}
 	public String getSscc() {
 		return sscc;
 	}
