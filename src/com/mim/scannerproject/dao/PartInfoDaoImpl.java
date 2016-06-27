@@ -19,13 +19,13 @@ public class PartInfoDaoImpl implements PartInfoDao {
 	private Connection conn = null;
 	private Statement stmt = null;
 	private ResultSet rs = null;
-	String sql = "Select * from mim.VTransInboundtoPutway where PartTran_UD_PTRN_SSCC_c = " + "208156790200148319";
+	//String sql = "Select * from mim.VTransInboundtoPutway where PartTran_UD_PTRN_SSCC_c = " + "208156790200148319";
 	
 	@Override
-	public PartInfo getPartInfo() throws SQLException
-	{
+	public PartInfo getPartInfo(String sscc) throws SQLException
+	{	
+		String sql = "Select * from mim.VTransInboundtoPutway where PartTran_UD_PTRN_SSCC_c = " + sscc;
 		PartInfo info = new PartInfo();
-		
 		conn = ConnectionManager.getConnection();
 		stmt = conn.createStatement();
 		rs = stmt.executeQuery(sql);

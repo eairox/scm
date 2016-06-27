@@ -8,5 +8,5 @@ import org.springframework.stereotype.Service;
 import com.mim.scannerproject.model.PartInfo;
 
 public interface PartInfoDao {
-	public PartInfo getPartInfo() throws SQLException;
+	public PartInfo getPartInfo(String sscc) throws SQLException;
 }
